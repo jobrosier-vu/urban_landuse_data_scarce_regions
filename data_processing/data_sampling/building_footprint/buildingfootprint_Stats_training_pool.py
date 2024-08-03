@@ -21,12 +21,12 @@ BASEPATH = r''
 
 sys.path.append(BASEPATH)
 
-from UTILS.buildingfootprint_Stats_basic import *
+from utils.buildingfootprint_Stats_basic import *
 
 # turn off default warning
 pd.options.mode.chained_assignment = None  # default='warn'
 
-base_path = r'C:\Users\JJR226\Documents\PhD\paper4'
+base_path = r''
 
 
 categories = ['commercial_institutional',
@@ -142,7 +142,7 @@ def main(cities_list):
     return 'finished'
         
 if __name__ == "__main__":    
-    cities = [['Daressalaam']]
+    cities = []
     sample_size = 300
     
     main(cities)

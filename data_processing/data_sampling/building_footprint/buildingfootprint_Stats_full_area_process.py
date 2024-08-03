@@ -5,11 +5,12 @@ import numpy as np
 import sys
 import os
 
-BASEPATH = r'C:\Users\JJR226\Documents\PhD\paper4\SCRIPTS\PREPROCESSING\BUILDINGFOOTPRINTS'
+BASEPATH = r''
 
 sys.path.append(BASEPATH)
 
-from UTILS.buildingfootprint_Stats_basic import *
+from utils.buildingfootprint_Stats_basic import *
+from utils.get_epsg import get_epsg
 
 def filter_gdf(gdf1,gdf2,mode='excluding'):
     '''
@@ -103,8 +104,8 @@ def load_building_data(city):
     
     if setting=='DL':
         # data paths
-        BF_PATH = r'C:\Users\JJR226\Documents\PhD\paper4\DATA\BUILDINGFOOTPRINT\{}\building_footprints_{}_full.shp'.format(city.upper(),city)
-        ROI_PATH = r'C:\Users\JJR226\Documents\PhD\paper4\DATA\SHAPEFILES\{}\ROI\ROI.shp'.format(city.upper())
+        BF_PATH = r''
+        ROI_PATH = r''
         
         # load the BF and temp save the crs
         BF = gpd.read_file(BF_PATH)
@@ -129,7 +130,7 @@ def load_building_data(city):
         
     if setting=='STATS':
         # data paths
-        BF_PATH = r'C:\Users\JJR226\Documents\PhD\paper4\DATA\BUILDINGFOOTPRINT\{}\building_footprints_{}_full.shp'.format(city.upper(),city)
+        BF_PATH = r''
         
         # load the BF and temp save the crs
         BF = gpd.read_file(BF_PATH)
@@ -165,26 +166,12 @@ def generate_grid(base_path,city):
     
     return segments
     
-def get_epsg(city):
-    
-    # epsg for europe
-    epsg = 3035
-    
-    if city == 'Lusaka' or city == 'Harare':
-        epsg = 20935 # Lusaka
-    elif city == 'Kampala' or city == 'Nairobi' or city == 'Daressalaam':
-        epsg = 21036 # Kampala/Nairobi
-    elif city == 'Lilongwe':
-        epsg = 20936  
-    elif city == 'Maputo':
-        epsg = 2737   
-    return epsg
     
 if __name__ == "__main__":
     # List of cities you want to process
-    cities = ['Newyork','Houston'] 
+    cities = ['',''] 
     
-    base_path = r'C:\Users\JJR226\Documents\PhD\paper4\DATA'
+    base_path = r''
     
     # building footprint data for each city 
     building_footprint_data = {city: load_building_data(city) for city in cities}
@@ -200,7 +187,7 @@ if __name__ == "__main__":
         processes = []
         
         # location to write the data to
-        SAVE_PATH = r"C:\Users\JJR226\Documents\PhD\paper4\DATA\BUILDINGFOOTPRINT\{}\STATISTICS\FULLAREA".format(city.upper())
+        SAVE_PATH = r"".format(city.upper())
         os.makedirs(SAVE_PATH, exist_ok=True)
         
         # Divide the grid into chunks

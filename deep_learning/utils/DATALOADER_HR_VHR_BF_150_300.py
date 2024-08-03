@@ -338,8 +338,8 @@ def Dataloader_train_val_test(path,pathBF,extension,val_test_size,transform,batc
 
 
 if __name__ == "__main__":        
-    path = r'C:\Users\JJR226\Documents\PhD\Paper3\DL\data\Nairobi_Google_150px_30sp_06res'
-    pathBF = r"C:\Users\JJR226\Documents\PhD\Paper3\DL\data\BF_Nairobi_Planet_150px_30sp_3res\total_df_150_300m.pkl"
+    path = r''
+    pathBF = r""
 
     val_test_size = 0.2
     batch_size = 10

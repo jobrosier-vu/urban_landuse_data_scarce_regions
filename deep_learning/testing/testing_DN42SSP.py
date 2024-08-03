@@ -17,7 +17,7 @@ import sys
 import json
 
 # set base path
-BASEPATH = r'C:\Users\JJR226\Documents\PhD\Paper3\DL_verified'
+BASEPATH = r''
 
 sys.path.append(BASEPATH)
 from utils.DATALOADER_HR_VHR import *
@@ -156,7 +156,7 @@ def extract_params(checkpoint):
 
 if __name__ == "__main__":
     
-    checkpoint = r'C:\Users\JJR226\Documents\PhD\Paper3\DL_verified\checkpoints\Nairobi_Planet_150px_30sp_3res\DenseNet42\Planet_lr2_SGD_comb2_weight_0_valtest_0102\default\seed_1'
+    checkpoint = ''
        
     read_dictionary = extract_params(checkpoint)
     

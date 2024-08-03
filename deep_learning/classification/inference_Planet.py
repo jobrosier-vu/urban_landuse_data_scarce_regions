@@ -14,7 +14,7 @@ import warnings
 warnings.simplefilter("ignore")
 
 # set base path
-BASEPATH = r'C:\Users\JJR226\Documents\PhD\Paper3\DL_verified'
+BASEPATH = r''
 sys.path.append(BASEPATH)
 from utils.DATALOADER_HR_VHR import *
 from models.Densenet42 import *
@@ -181,7 +181,7 @@ class Fullset_hr(torchvision.datasets.DatasetFolder):
     
 if __name__ == "__main__":
     
-    checkpoint = r"C:\Users\JJR226\Documents\PhD\Paper3\DL_verified\checkpoints\Kampala_Planet_150px_30sp_3res\DenseNet42\Planet_lr2_SGD_comb2_weights_0_test_02_orisplit\fixed_scheduler_train_val_combined\seed_3"
+    checkpoint = r""
        
     read_dictionary = extract_params(checkpoint)
     

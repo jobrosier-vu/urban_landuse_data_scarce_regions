@@ -17,7 +17,7 @@ import sys
 
 
 # set base path
-BASEPATH = r'C:\Users\JJR226\Documents\PhD\Paper3\DL_verified'
+BASEPATH = r''
 
 sys.path.append(BASEPATH)
 from utils.DATALOADER_HR_VHR import *
@@ -165,7 +165,7 @@ def train_model(model_name,model_hparams,optimizer_name,optimizer_hparams,weight
     
 if __name__ == "__main__":
     
-    input_variables = ['DenseNet42_Nairobi_Planet_150px_30sp_3res_Planet_lr2_SGD_comb2_weights_0_test_02_orisplit.npy']
+    input_variables = []
     
     for input_file in input_variables:
         read_dictionary = np.load(os.path.join(BASEPATH,'training','INPUT_VALUES',input_file),allow_pickle='TRUE').item()

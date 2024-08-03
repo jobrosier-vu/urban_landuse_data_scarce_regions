@@ -22,7 +22,7 @@ import warnings
 warnings.simplefilter("ignore")
 
 # set base path
-BASEPATH = r'C:\Users\JJR226\Documents\PhD\Paper3\DL_verified'
+BASEPATH = r''
 sys.path.append(BASEPATH)
 from utils.DATALOADER_HR_VHR_BF_150 import *
 from models.Densenet42_BF_seperate_features import *
@@ -213,7 +213,7 @@ class Fullset_hr(torchvision.datasets.DatasetFolder):
 
 if __name__ == "__main__":
     
-    checkpoint = r'C:\Users\JJR226\Documents\PhD\Paper3\DL_verified\checkpoints\Nairobi_Planet_150px_30sp_3res\DenseNet42\Planet_lr2_SGD_comb2_weights_0_inferencefeatures\default\seed_1'       
+    checkpoint = r''       
     read_dictionary = extract_params(checkpoint)
     
     # experiment parameters
@@ -230,8 +230,8 @@ if __name__ == "__main__":
     pretrained_network = os.path.join(checkpoint,'checkpoints','last.ckpt')
     
     # Path to the folder where the datasets are/should be downloaded (e.g. CIFAR10)
-    DATASET_PATH = r'C:\Users\JJR226\Documents\PhD\Paper3\DL_verified\data\Nairobi_Planet_150px_150sp_3res_fullarea'
-    BF_DATASET_PATH = r"C:\Users\JJR226\Documents\PhD\Paper3\DL_verified\data\BF_Nairobi_Planet_150px_30sp_3res\total_df_300m_fullarea.npy"
+    DATASET_PATH = r'..\data\Nairobi_Planet_150px_150sp_3res_fullarea'
+    BF_DATASET_PATH = r"..\data\BF_Nairobi_Planet_150px_30sp_3res\total_df_300m_fullarea.npy"
     
     # Function for setting the seed
     pl.seed_everything(version_id)

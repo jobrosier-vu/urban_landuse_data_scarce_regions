@@ -370,7 +370,7 @@ def Dataloader_pretrained(path,test_size, num_workers,batch_size,transform,input
 
 ###### test
 if __name__ == "__main__":
-    path = r'C:\Users\JJR226\Documents\PhD\Paper3\DL_verified\data\Nairobi_Google_150px_30sp_06res'
+    path = r''
     val_test_size = 0.2
     batch_size = 30
     num_workers = 0
@@ -379,6 +379,3 @@ if __name__ == "__main__":
     input_type='image'
     train_loader,val_loader,test_loader = Dataloader_train_val_test(path,val_test_size, num_workers,batch_size,transform,input_type)
     
-    check2 = []
-    for _, target in iter(val_loader):
-        check2.append(np.array(target))
